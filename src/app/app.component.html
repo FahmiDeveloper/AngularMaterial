@@ -1,6 +1,22 @@
-<mat-slider min="1" max="100" step="1" value="1"></mat-slider>
-<mat-checkbox>subscribe to newsletter</mat-checkbox>
-<button mat-button color="primary">Primary</button>
+<mat-form-field appearance="fill">
+  <mat-select [(ngModel)]="col" >
+    <mat-option *ngFor = 'let color of Colors'
+    [value]="color.id">
+    {{ color.name }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+
+<h4>Basic mat-select</h4>
+<mat-form-field appearance="fill">
+  <mat-label>Favorite food</mat-label>
+  <mat-select [(ngModel)]="defaultFood">
+    <mat-option *ngFor="let food of foods" [value]="food.value">
+      {{food.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
 
 
 <router-outlet></router-outlet>
