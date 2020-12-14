@@ -1,6 +1,40 @@
-<mat-slider min="1" max="100" step="1" value="1"></mat-slider>
-<mat-checkbox>subscribe to newsletter</mat-checkbox>
-<button mat-button color="primary">Primary</button>
 
+<mat-checkbox
+[value]=""
+checked="checked"
+
+>subscribe to newsletter</mat-checkbox>
+
+<br><br>
+
+<!-- use checked with property binding -->
+<mat-checkbox
+[value]=""
+[checked]="isChecked"
+
+>subscribe to newsletter</mat-checkbox>
+
+<br><br>
+
+<!-- use checkbox with change event -->
+<mat-checkbox
+[value]=""
+[checked]="isChecked"
+(change)="onChange($event)"
+
+>subscribe to newsletter</mat-checkbox>
+
+<br><br>
+
+<!-- hide or show div with change event -->
+<mat-checkbox
+#showDetails
+[value]=""
+[checked]="isChecked"
+(change)="onChange($event)">
+Show details</mat-checkbox>
+
+<div *ngIf="showDetails.checked">Some details....</div>
+<!-- #showDetails: template variable -->
 
 <router-outlet></router-outlet>
