@@ -1,6 +1,9 @@
-<mat-slider min="1" max="100" step="1" value="1"></mat-slider>
-<mat-checkbox>subscribe to newsletter</mat-checkbox>
-<button mat-button color="primary">Primary</button>
+<mat-form-field appearance="fill">
+  <mat-label>Choose a date</mat-label>
+  <input matInput [matDatepicker]="picker" [min]="minDate" [max]="maxDate" (focus)="picker.open()">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker touchUi="true"></mat-datepicker>
+</mat-form-field>
 
 
 <router-outlet></router-outlet>
