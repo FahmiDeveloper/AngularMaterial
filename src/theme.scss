@@ -1,0 +1,66 @@
+
+//@import "another.scss"; // use code scss of another file here
+
+
+
+
+
+
+
+
+$color: green;
+
+h1 {
+    //....
+    color: $color;
+}
+
+h2 {
+    //....
+    color: $color;
+}
+
+// you should here recompile the application to see changes
+
+
+
+
+
+
+// put common code scss in one class and used it in multiple places
+@mixin soft-border {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.box {
+    @include soft-border()
+}
+
+.modern-box {
+    @include soft-border()
+    //.....
+}
+
+
+
+
+
+
+
+// add argument to mixin
+@mixin soft-border($border-radius) {
+    border: 1px solid #ccc;
+    border-radius: $border-radius;
+    padding: 10px;
+}
+
+.box {
+    @include soft-border(5px)
+}
+
+.modern-box {
+    @include soft-border(10px)
+    //.....
+}
