@@ -11,6 +11,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { EditCourseComponent } from './edit-course/edit-course.component';
 
 import {MatDialogModule} from '@angular/material/dialog';
+import { CourseService } from './course.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,10 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatButtonModule,
     MatDialogModule
   ],
-  providers: [],
+  providers: [
+    CourseService,
+    { provide: CourseService, useClass: CourseService}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
