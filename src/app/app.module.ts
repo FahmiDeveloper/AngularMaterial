@@ -4,10 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-import { MatSliderModule } from '@angular/material/slider';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatButtonModule } from '@angular/material/button';
+import { MatComponentsModule } from './mat-components.module';
 
 @NgModule({
   declarations: [
@@ -17,9 +14,7 @@ import { MatButtonModule } from '@angular/material/button';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatSliderModule,
-    MatCheckboxModule,
-    MatButtonModule
+    MatComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
