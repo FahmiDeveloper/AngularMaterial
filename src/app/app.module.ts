@@ -9,6 +9,8 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
 
+import {MatTabsModule} from '@angular/material/tabs';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -19,7 +21,8 @@ import { MatButtonModule } from '@angular/material/button';
     BrowserAnimationsModule,
     MatSliderModule,
     MatCheckboxModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
