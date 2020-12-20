@@ -5,5 +5,5 @@ body { margin: 0; }
 
 @import '~@angular/material/theming';
 
-$custom-typography: mat-typography-config($font-family: '"Langar", cursive');
+$custom-typography: mat-typography-config($font-family: '"Langar", cursive', $headline: mat-typography-level(35px, 32px, 700));
 @include mat-core($custom-typography);
