@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Observable, timer } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'AngularMaterial';
+  isLoading = false;
+
+  obsTimer: Observable<number> = timer(5000);
+
+  constructor() {
+    this.isLoading = true;
+    this.obsTimer.subscribe(x => this.isLoading = false);
+  }
 }

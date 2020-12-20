@@ -1,6 +1,7 @@
-<mat-slider min="1" max="100" step="1" value="1"></mat-slider>
-<mat-checkbox>subscribe to newsletter</mat-checkbox>
-<button mat-button color="primary">Primary</button>
+<mat-spinner
+mode="indeterminate"
+*ngIf="isLoading"
+></mat-spinner>
 
 
 <router-outlet></router-outlet>
